@@ -235,3 +235,24 @@ input {
   text-shadow: -1px 1px 0 #000, 1px 1px 0 #000, 
                 1px -1px 0 #000, -1px -1px 0 #000; 
 }
+
+/* Large screens and desktops */
+@media (min-width: 1200px) {
+  .trending-grid {
+    grid-template-columns: repeat(4, minmax(200px, 1fr)); /* Adjust the number of columns as needed */
+  }
+}
+
+/* Medium screens and tablets */
+@media (max-width: 1199px) and (min-width: 768px) {
+  .trending-grid {
+    grid-template-columns: repeat(3, minmax(200px, 1fr)); /* Adjust the number of columns as needed */
+  }
+}
+
+/* Small screens and mobile devices */
+@media (max-width: 767px) {
+  .trending-grid {
+    grid-template-columns: repeat(2, minmax(150px, 1fr)); /* Adjust the number of columns as needed */
+  }
+}
