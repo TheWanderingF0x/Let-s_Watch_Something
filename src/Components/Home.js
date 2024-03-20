@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
+import MenuBar from './MenuBar';
 
 const Home = () => {
 const [trendingMovies, setTrendingMovies] = useState([]);
@@ -34,20 +34,7 @@ const [trendingMovies, setTrendingMovies] = useState([]);
             <img src={process.env.PUBLIC_URL + '/assets/logo.png'} alt="Logo"
             style={{ width: 'auto', height: '100px' }}/>
         </div>
-        <div className='mainMenu'>
-          <Link to="/search">
-            <button>Search Actor</button>
-          </Link>
-          <Link to="/movies">
-            <button className="movies-button">Search Movies</button>
-          </Link>
-          <Link to="/tv-series">
-            <button className="tv-series-button">Search TV Series</button>
-          </Link>
-          <Link to="/about">
-            <button className="about-button">About</button>
-          </Link>
-        </div>
+        <MenuBar/>
         <div className="trending-section">
           <h1 className='trendingCateg'>Trending Movies</h1>
         <div className="trending-grid">

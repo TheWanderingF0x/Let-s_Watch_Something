@@ -16,9 +16,9 @@ const Movies = () => {
       );
 
        // Sort the results: first with images, then without
-       const sortedResults = response.data.results.sort((a, b) =>
-       a.poster_path && !b.poster_path ? -1 : 1
-     );
+    //    const sortedResults = response.data.results.sort((a, b) =>
+    //    a.poster_path && !b.poster_path ? -1 : 1
+    //  );
 
       setSearchResults(response.data.results);
     } catch (error) {

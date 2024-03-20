@@ -15,9 +15,9 @@ const TVSeries = () => {
       );
 
       // Sort the results: first with images, then without
-      const sortedResults = response.data.results.sort((a, b) =>
-        a.poster_path && !b.poster_path ? -1 : 1
-      );
+      // const sortedResults = response.data.results.sort((a, b) =>
+      //   a.poster_path && !b.poster_path ? -1 : 1
+      // );
 
       setSearchResults(response.data.results);
     } catch (error) {
@@ -59,6 +59,7 @@ const TVSeries = () => {
           <button onClick={handleBack} className="back-button">
             Back to Home
           </button>
+          {/* <MenuBar/> */}
           <input
             type="text"
             placeholder="Search for TV Series"
